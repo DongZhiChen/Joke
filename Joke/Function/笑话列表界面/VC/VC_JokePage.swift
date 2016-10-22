@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -26,7 +27,26 @@ class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
         TB_JokeList?.delegate = self;
         TB_JokeList?.dataSource = self;
         TB_JokeList?.register(UINib.init(nibName: "CellJoke", bundle: Bundle.main), forCellReuseIdentifier: CellID)
+
+        var dict=Dictionary<String,String>() ;
+        dict["page"] = "1";
+        dict["pagesize"] = "20";
         
+      let URL =  URLStitching.URLStitchingGetCompleteString(API: API_SearchJoke, dict: dict as NSDictionary);
+        
+        Alamofire.request(URL).responseJSON { response in
+            
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                
+                print("JSON: \(JSON)")
+                
+            }
+        }
         self.view .addSubview(TB_JokeList!);
     
     }
@@ -42,6 +62,7 @@ class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         let cell:CellJoke = tableView.dequeueReusableCell(withIdentifier: CellID) as!CellJoke
         
+ 
         return cell;
         
     }
