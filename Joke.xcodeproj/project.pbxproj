@@ -23,6 +23,7 @@
 		F27B60271DB32189008BE9CB /* 40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27B60201DB32189008BE9CB /* 40@2x.png */; };
 		F27B60281DB32189008BE9CB /* 40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27B60211DB32189008BE9CB /* 40@3x.png */; };
 		F27B60291DB32189008BE9CB /* 60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27B60221DB32189008BE9CB /* 60@3x.png */; };
+		F2B3B8A41DBC43AB00D054E6 /* M_JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B3B8A31DBC43AB00D054E6 /* M_JokeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		F27B60201DB32189008BE9CB /* 40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40@2x.png"; sourceTree = "<group>"; };
 		F27B60211DB32189008BE9CB /* 40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40@3x.png"; sourceTree = "<group>"; };
 		F27B60221DB32189008BE9CB /* 60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "60@3x.png"; sourceTree = "<group>"; };
+		F2B3B8A31DBC43AB00D054E6 /* M_JokeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M_JokeData.swift; path = "Model/笑话数据/M_JokeData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 		F27B60171DB32189008BE9CB /* 笑话列表界面 */ = {
 			isa = PBXGroup;
 			children = (
+				F2B3B8A11DBC436B00D054E6 /* Model */,
 				F27B60181DB32189008BE9CB /* Cell */,
 				F27B601B1DB32189008BE9CB /* VC */,
 			);
@@ -261,6 +264,22 @@
 				F27B60221DB32189008BE9CB /* 60@3x.png */,
 			);
 			path = icon;
+			sourceTree = "<group>";
+		};
+		F2B3B8A11DBC436B00D054E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2B3B8A21DBC437400D054E6 /* 笑话数据 */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2B3B8A21DBC437400D054E6 /* 笑话数据 */ = {
+			isa = PBXGroup;
+			children = (
+				F2B3B8A31DBC43AB00D054E6 /* M_JokeData.swift */,
+			);
+			name = "笑话数据";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +571,7 @@
 			files = (
 				F27B5FE91DB32156008BE9CB /* AppDelegate.swift in Sources */,
 				F23A12A51DBBACB6005A3E90 /* APIManage.swift in Sources */,
+				F2B3B8A41DBC43AB00D054E6 /* M_JokeData.swift in Sources */,
 				F27B60251DB32189008BE9CB /* VC_JokePage.swift in Sources */,
 				F23A12AA1DBBB1EA005A3E90 /* URLStitching.swift in Sources */,
 				F27B60231DB32189008BE9CB /* CellJoke.swift in Sources */,

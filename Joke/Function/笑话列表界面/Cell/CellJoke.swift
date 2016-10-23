@@ -10,6 +10,7 @@ import UIKit
 
 class CellJoke: UITableViewCell {
 
+    @IBOutlet weak var LB_Content: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -8,14 +8,15 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     var  TB_JokeList  : UITableView?
     
      let CellID:String = "CellJoke"
-     let CellH = 60.0
-    
+    let CellH = 60.0
+    var arrayJokeData = [AnyObject]();
     
     
     override func viewDidLoad() {
@@ -36,16 +37,20 @@ class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         Alamofire.request(URL).responseJSON { response in
             
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
+
+        let json = JSON(response.result.value);
             
-            if let JSON = response.result.value {
+            let data = json["result"]["data"];
+            
+            for (index,subJson):(String, JSON) in data{
+            
                 
-                print("JSON: \(JSON)")
-                
+                let jokeData:M_JokeData = M_JokeData.init(dict: subJson.dictionaryObject as! [String : AnyObject]);
+                self.arrayJokeData.append(jokeData)
+
             }
+            
+            self.TB_JokeList?.reloadData();
         }
         self.view .addSubview(TB_JokeList!);
     
@@ -55,14 +60,18 @@ class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
     //MARK: - UITableViewDataSource -
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        
+        return self.arrayJokeData.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:CellJoke = tableView.dequeueReusableCell(withIdentifier: CellID) as!CellJoke
         
+       let jokeData:M_JokeData = self.arrayJokeData[indexPath.row] as! M_JokeData;
  
+        cell.LB_Content.text = jokeData.content;
+        
         return cell;
         
     }
