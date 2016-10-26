@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.white;
         self.window?.makeKeyAndVisible();
         
-        let rootVC = VC_JokePage.init();
+        let rootVC = VC_AmuseImage.init();
         self.window?.rootViewController = rootVC;
         
         

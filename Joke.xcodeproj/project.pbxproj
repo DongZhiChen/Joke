@@ -11,6 +11,9 @@
 		7AD46385120215879C5C5986 /* Pods_JokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395153FDED6363CF196BD390 /* Pods_JokeTests.framework */; };
 		8E6BAD5312719B859F5CAFEB /* Pods_Joke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD967E94B226BCA0DBE06909 /* Pods_Joke.framework */; };
 		F2028F701DBFF7EF005A4E7E /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2028F6F1DBFF7EF005A4E7E /* Tools.swift */; };
+		F2071A531DC0D9DA00969546 /* VC_AmuseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2071A521DC0D9DA00969546 /* VC_AmuseImage.swift */; };
+		F2071A571DC0DB4400969546 /* CellAmuseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2071A551DC0DB4400969546 /* CellAmuseImage.swift */; };
+		F2071A581DC0DB4400969546 /* CellAmuseImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2071A561DC0DB4400969546 /* CellAmuseImage.xib */; };
 		F23A12A51DBBACB6005A3E90 /* APIManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23A12A41DBBACB6005A3E90 /* APIManage.swift */; };
 		F23A12AA1DBBB1EA005A3E90 /* URLStitching.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23A12A91DBBB1EA005A3E90 /* URLStitching.swift */; };
 		F27B5FE91DB32156008BE9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B5FE81DB32156008BE9CB /* AppDelegate.swift */; };
@@ -55,6 +58,9 @@
 		DD967E94B226BCA0DBE06909 /* Pods_Joke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Joke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0CDF461F23A64F825F2B06 /* Pods-JokeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JokeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JokeUITests/Pods-JokeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F2028F6F1DBFF7EF005A4E7E /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tools.swift; path = Config/Tools.swift; sourceTree = "<group>"; };
+		F2071A521DC0D9DA00969546 /* VC_AmuseImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_AmuseImage.swift; path = "趣图列表界面/VC/VC_AmuseImage.swift"; sourceTree = "<group>"; };
+		F2071A551DC0DB4400969546 /* CellAmuseImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellAmuseImage.swift; path = "趣图列表界面/Cell/CellAmuseImage.swift"; sourceTree = "<group>"; };
+		F2071A561DC0DB4400969546 /* CellAmuseImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellAmuseImage.xib; path = "趣图列表界面/Cell/CellAmuseImage.xib"; sourceTree = "<group>"; };
 		F23A12A41DBBACB6005A3E90 /* APIManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManage.swift; path = Config/APIManage.swift; sourceTree = "<group>"; };
 		F23A12A91DBBB1EA005A3E90 /* URLStitching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLStitching.swift; path = "Common/Model/URL拼接/URLStitching.swift"; sourceTree = "<group>"; };
 		F27B5FE51DB32156008BE9CB /* Joke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Joke.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +132,32 @@
 				DF0CDF461F23A64F825F2B06 /* Pods-JokeUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F2071A501DC0D82400969546 /* 趣图列表界面 */ = {
+			isa = PBXGroup;
+			children = (
+				F2071A541DC0DB2300969546 /* Cell */,
+				F2071A511DC0D97500969546 /* VC */,
+			);
+			name = "趣图列表界面";
+			sourceTree = "<group>";
+		};
+		F2071A511DC0D97500969546 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F2071A521DC0D9DA00969546 /* VC_AmuseImage.swift */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		F2071A541DC0DB2300969546 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F2071A551DC0DB4400969546 /* CellAmuseImage.swift */,
+				F2071A561DC0DB4400969546 /* CellAmuseImage.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		F23A129B1DBBA447005A3E90 /* Config */ = {
@@ -218,6 +250,7 @@
 		F27B60161DB32189008BE9CB /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				F2071A501DC0D82400969546 /* 趣图列表界面 */,
 				F27B60171DB32189008BE9CB /* 笑话列表界面 */,
 			);
 			path = Function;
@@ -409,6 +442,7 @@
 				F27B60241DB32189008BE9CB /* CellJoke.xib in Resources */,
 				F27B60261DB32189008BE9CB /* Default-568h@2x.png in Resources */,
 				F27B60291DB32189008BE9CB /* 60@3x.png in Resources */,
+				F2071A581DC0DB4400969546 /* CellAmuseImage.xib in Resources */,
 				F27B60281DB32189008BE9CB /* 40@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +610,8 @@
 				F23A12A51DBBACB6005A3E90 /* APIManage.swift in Sources */,
 				F2B3B8A41DBC43AB00D054E6 /* M_JokeData.swift in Sources */,
 				F27B60251DB32189008BE9CB /* VC_JokePage.swift in Sources */,
+				F2071A571DC0DB4400969546 /* CellAmuseImage.swift in Sources */,
+				F2071A531DC0D9DA00969546 /* VC_AmuseImage.swift in Sources */,
 				F2028F701DBFF7EF005A4E7E /* Tools.swift in Sources */,
 				F23A12AA1DBBB1EA005A3E90 /* URLStitching.swift in Sources */,
 				F27B60231DB32189008BE9CB /* CellJoke.swift in Sources */,
@@ -632,6 +668,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -683,6 +720,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -713,6 +751,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D588A77399ACCF9E7528559 /* Pods-Joke.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 3G8327GJ7X;
@@ -733,6 +772,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87AE96EFC768381DAD8AE03B /* Pods-Joke.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 3G8327GJ7X;
