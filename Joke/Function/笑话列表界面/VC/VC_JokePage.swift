@@ -42,7 +42,7 @@ class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
             
             let data = json["result"]["data"];
             
-            for (index,subJson):(String, JSON) in data{
+            for (_,subJson):(String, JSON) in data{
             
                 
                 let jokeData:M_JokeData = M_JokeData.init(dict: subJson.dictionaryObject as! [String : AnyObject]);
@@ -67,15 +67,24 @@ class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:CellJoke = tableView.dequeueReusableCell(withIdentifier: CellID) as!CellJoke
-        
+        cell.selectionStyle = UITableViewCellSelectionStyle.none;
+
        let jokeData:M_JokeData = self.arrayJokeData[indexPath.row] as! M_JokeData;
  
-        cell.LB_Content.text = jokeData.content;
+        cell .setCellJokeDataWithData(jokeData: jokeData)
         
         return cell;
         
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let jokeData:M_JokeData = self.arrayJokeData[indexPath.row] as! M_JokeData;
+        
+        return jokeData.contentH + CellJokeOtherH;
+        
+    }
     
     //MARK: -
     
