@@ -28,6 +28,7 @@
 		F27B60281DB32189008BE9CB /* 40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27B60211DB32189008BE9CB /* 40@3x.png */; };
 		F27B60291DB32189008BE9CB /* 60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27B60221DB32189008BE9CB /* 60@3x.png */; };
 		F2B3B8A41DBC43AB00D054E6 /* M_JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B3B8A31DBC43AB00D054E6 /* M_JokeData.swift */; };
+		F2EE49DC1DC29E9300E06FEE /* M_AmuseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE49DB1DC29E9300E06FEE /* M_AmuseImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		F27B60211DB32189008BE9CB /* 40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40@3x.png"; sourceTree = "<group>"; };
 		F27B60221DB32189008BE9CB /* 60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "60@3x.png"; sourceTree = "<group>"; };
 		F2B3B8A31DBC43AB00D054E6 /* M_JokeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M_JokeData.swift; path = "Model/笑话数据/M_JokeData.swift"; sourceTree = "<group>"; };
+		F2EE49DB1DC29E9300E06FEE /* M_AmuseImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M_AmuseImage.swift; path = "趣图列表界面/Model/M_AmuseImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		F2071A501DC0D82400969546 /* 趣图列表界面 */ = {
 			isa = PBXGroup;
 			children = (
+				F2EE49DD1DC29E9800E06FEE /* Model */,
 				F2071A541DC0DB2300969546 /* Cell */,
 				F2071A511DC0D97500969546 /* VC */,
 			);
@@ -316,6 +319,22 @@
 				F2B3B8A31DBC43AB00D054E6 /* M_JokeData.swift */,
 			);
 			name = "笑话数据";
+			sourceTree = "<group>";
+		};
+		F2EE49DD1DC29E9800E06FEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2EE49DE1DC29EB600E06FEE /* 趣图数据 */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2EE49DE1DC29EB600E06FEE /* 趣图数据 */ = {
+			isa = PBXGroup;
+			children = (
+				F2EE49DB1DC29E9300E06FEE /* M_AmuseImage.swift */,
+			);
+			name = "趣图数据";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -609,6 +628,7 @@
 				F27B5FE91DB32156008BE9CB /* AppDelegate.swift in Sources */,
 				F23A12A51DBBACB6005A3E90 /* APIManage.swift in Sources */,
 				F2B3B8A41DBC43AB00D054E6 /* M_JokeData.swift in Sources */,
+				F2EE49DC1DC29E9300E06FEE /* M_AmuseImage.swift in Sources */,
 				F27B60251DB32189008BE9CB /* VC_JokePage.swift in Sources */,
 				F2071A571DC0DB4400969546 /* CellAmuseImage.swift in Sources */,
 				F2071A531DC0D9DA00969546 /* VC_AmuseImage.swift in Sources */,

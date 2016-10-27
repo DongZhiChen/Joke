@@ -9,10 +9,12 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class VC_AmuseImage: UIViewController,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
 
     var CV_AmuseList:UICollectionView?;
+    var arrayAmuseImageData = [AnyObject]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +43,13 @@ class VC_AmuseImage: UIViewController,UICollectionViewDelegate,UICollectionViewD
         
             let data = json["result"]["data"];
             
-//            for (_,subJson):(String, JSON) in data{
-//                
-//                
-//                //let jokeData:M_JokeData = M_JokeData.init(dict: subJson.dictionaryObject as! [String : AnyObject]);
-//                //self.arrayJokeData.append(jokeData)
-//                
-//            }
+            for (_,subJson):(String, JSON) in data{
+                
+                
+                let amuseImageData:M_AmuseImage = M_AmuseImage.init(dict: subJson.dictionaryObject as! [String : AnyObject]);
+                self.arrayAmuseImageData.append(amuseImageData);
+                
+            }
             
             self.CV_AmuseList?.reloadData();
         }
@@ -59,14 +61,17 @@ class VC_AmuseImage: UIViewController,UICollectionViewDelegate,UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10;
+        return self.arrayAmuseImageData.count;
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell : CellAmuseImage = collectionView.dequeueReusableCell(withReuseIdentifier: CellAmuseImageID, for: indexPath) as! CellAmuseImage;
-        
+        let amuseImageData:M_AmuseImage = self.arrayAmuseImageData[indexPath.row] as! M_AmuseImage;
+        cell.LB_Content.text = amuseImageData.content;
+        cell.IV_AmuseImage.sd_setImage(with: URL.init(string: amuseImageData.url), placeholderImage: UIImage.init(named: "40.png"), options: SDWebImageOptions.refreshCached)
+        cell.IV_AmuseImage.sd_setImage(with: URL.init(string: amuseImageData.url));
         return cell;
         
     }

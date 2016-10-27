@@ -15,16 +15,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="40.png" translatesAutoresizingMaskIntoConstraints="NO" id="fHJ-4h-yDA">
-                        <constraints>
-                            <constraint firstAttribute="height" constant="109" id="bEM-IE-LxL"/>
-                        </constraints>
-                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="40.png" translatesAutoresizingMaskIntoConstraints="NO" id="fHJ-4h-yDA"/>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xL-hY-6nQ">
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="6Mj-cQ-FLp"/>
+                            <constraint firstAttribute="height" constant="20" id="6Mj-cQ-FLp"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -36,9 +32,14 @@
                 <constraint firstAttribute="trailing" secondItem="8xL-hY-6nQ" secondAttribute="trailing" id="ECr-hx-pxa"/>
                 <constraint firstItem="fHJ-4h-yDA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="T84-6r-Lq8"/>
                 <constraint firstAttribute="trailing" secondItem="fHJ-4h-yDA" secondAttribute="trailing" id="aQ7-G5-dYK"/>
+                <constraint firstItem="8xL-hY-6nQ" firstAttribute="top" secondItem="fHJ-4h-yDA" secondAttribute="bottom" constant="10" id="gb9-0D-FKU"/>
                 <constraint firstItem="8xL-hY-6nQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vtd-Fr-VOu"/>
             </constraints>
             <size key="customSize" width="201" height="151"/>
+            <connections>
+                <outlet property="IV_AmuseImage" destination="fHJ-4h-yDA" id="ob7-jC-ppg"/>
+                <outlet property="LB_Content" destination="8xL-hY-6nQ" id="G61-zm-ere"/>
+            </connections>
             <point key="canvasLocation" x="-73" y="5"/>
         </collectionViewCell>
     </objects>
