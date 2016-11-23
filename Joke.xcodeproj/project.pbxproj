@@ -28,7 +28,10 @@
 		F27B60281DB32189008BE9CB /* 40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27B60211DB32189008BE9CB /* 40@3x.png */; };
 		F27B60291DB32189008BE9CB /* 60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27B60221DB32189008BE9CB /* 60@3x.png */; };
 		F2B3B8A41DBC43AB00D054E6 /* M_JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B3B8A31DBC43AB00D054E6 /* M_JokeData.swift */; };
+		F2CCF3DA1DC7ED35001E313C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CCF3D91DC7ED35001E313C /* JavaScriptCore.framework */; };
+		F2CCF3DC1DC7ED3E001E313C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CCF3DB1DC7ED3E001E313C /* libz.tbd */; };
 		F2EE49DC1DC29E9300E06FEE /* M_AmuseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE49DB1DC29E9300E06FEE /* M_AmuseImage.swift */; };
+		F2F6B3861DC9330700B1DA10 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F6B3851DC9330700B1DA10 /* test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +85,12 @@
 		F27B60211DB32189008BE9CB /* 40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40@3x.png"; sourceTree = "<group>"; };
 		F27B60221DB32189008BE9CB /* 60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "60@3x.png"; sourceTree = "<group>"; };
 		F2B3B8A31DBC43AB00D054E6 /* M_JokeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M_JokeData.swift; path = "Model/笑话数据/M_JokeData.swift"; sourceTree = "<group>"; };
+		F2CCF3D91DC7ED35001E313C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F2CCF3DB1DC7ED3E001E313C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F2EE49DB1DC29E9300E06FEE /* M_AmuseImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M_AmuseImage.swift; path = "趣图列表界面/Model/M_AmuseImage.swift"; sourceTree = "<group>"; };
+		F2F6B3461DC92AB100B1DA10 /* Joke-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Joke-Bridging-Header.h"; path = "Bridging-Header/Joke-Bridging-Header.h"; sourceTree = "<group>"; };
+		F2F6B3841DC9330700B1DA10 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		F2F6B3851DC9330700B1DA10 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CCF3DC1DC7ED3E001E313C /* libz.tbd in Frameworks */,
+				F2CCF3DA1DC7ED35001E313C /* JavaScriptCore.framework in Frameworks */,
 				8E6BAD5312719B859F5CAFEB /* Pods_Joke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +126,8 @@
 		099D433CE72549E49F8689C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2CCF3DB1DC7ED3E001E313C /* libz.tbd */,
+				F2CCF3D91DC7ED35001E313C /* JavaScriptCore.framework */,
 				DD967E94B226BCA0DBE06909 /* Pods_Joke.framework */,
 				395153FDED6363CF196BD390 /* Pods_JokeTests.framework */,
 				CB45B7B42F4693B6D8EDC82F /* Pods_JokeUITests.framework */,
@@ -221,6 +233,7 @@
 		F27B5FE71DB32156008BE9CB /* Joke */ = {
 			isa = PBXGroup;
 			children = (
+				F2F6B3451DC92A7600B1DA10 /* Bridging-Header */,
 				F23A12A61DBBB122005A3E90 /* Common */,
 				F23A129B1DBBA447005A3E90 /* Config */,
 				F27B60161DB32189008BE9CB /* Function */,
@@ -228,6 +241,8 @@
 				F27B5FE81DB32156008BE9CB /* AppDelegate.swift */,
 				F27B5FEF1DB32156008BE9CB /* Assets.xcassets */,
 				F27B5FF41DB32156008BE9CB /* Info.plist */,
+				F2F6B3841DC9330700B1DA10 /* test.h */,
+				F2F6B3851DC9330700B1DA10 /* test.m */,
 			);
 			path = Joke;
 			sourceTree = "<group>";
@@ -335,6 +350,14 @@
 				F2EE49DB1DC29E9300E06FEE /* M_AmuseImage.swift */,
 			);
 			name = "趣图数据";
+			sourceTree = "<group>";
+		};
+		F2F6B3451DC92A7600B1DA10 /* Bridging-Header */ = {
+			isa = PBXGroup;
+			children = (
+				F2F6B3461DC92AB100B1DA10 /* Joke-Bridging-Header.h */,
+			);
+			name = "Bridging-Header";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -627,6 +650,7 @@
 			files = (
 				F27B5FE91DB32156008BE9CB /* AppDelegate.swift in Sources */,
 				F23A12A51DBBACB6005A3E90 /* APIManage.swift in Sources */,
+				F2F6B3861DC9330700B1DA10 /* test.m in Sources */,
 				F2B3B8A41DBC43AB00D054E6 /* M_JokeData.swift in Sources */,
 				F2EE49DC1DC29E9300E06FEE /* M_AmuseImage.swift in Sources */,
 				F27B60251DB32189008BE9CB /* VC_JokePage.swift in Sources */,
@@ -774,14 +798,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 3G8327GJ7X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Joke/JSPatch",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Joke/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CDZ.Joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Joke/Bridging-Header/Joke-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_REFLECTION_METADATA_LEVEL = all;
 				SWIFT_VERSION = 3.0;
@@ -795,14 +824,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 3G8327GJ7X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Joke/JSPatch",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Joke/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CDZ.Joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Joke/Bridging-Header/Joke-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_REFLECTION_METADATA_LEVEL = all;
 				SWIFT_VERSION = 3.0;
@@ -820,6 +854,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CDZ.JokeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Joke/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Joke.app/Joke";
 			};
@@ -836,6 +871,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CDZ.JokeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Joke/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Joke.app/Joke";
 			};

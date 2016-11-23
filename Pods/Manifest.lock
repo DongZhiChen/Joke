@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.0.1)
+  - JSPatchPlatform (1.6.2):
+    - JSPatchPlatform/Core (= 1.6.2)
+  - JSPatchPlatform/Core (1.6.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -7,14 +10,16 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - JSPatchPlatform
   - SDWebImage (~> 3.8)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  JSPatchPlatform: 105e331f1b899a397d2bc0300a9ace9f9d7b8f08
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 1d944fae25555d404659ba47c60ddbe551ff0bcb
+PODFILE CHECKSUM: 037590f89bbe8a8e574fec1a96242e6e5d040566
 
 COCOAPODS: 1.1.1

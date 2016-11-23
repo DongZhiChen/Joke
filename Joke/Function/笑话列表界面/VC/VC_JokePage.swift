@@ -23,6 +23,7 @@ class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       
         
         TB_JokeList = UITableView.init(frame: self.view.bounds, style:.plain);
         TB_JokeList?.delegate = self;
@@ -56,7 +57,7 @@ class VC_JokePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     }
     
-    
+
     //MARK: - UITableViewDataSource -
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

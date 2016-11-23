@@ -20,5 +20,6 @@ target 'Joke' do
 pod 'Alamofire', '~> 4.0'
  pod 'SwiftyJSON'
  pod 'SDWebImage', '~>3.8'
+ pod 'JSPatchPlatform'
 
 end

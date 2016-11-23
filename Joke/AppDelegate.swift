@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let rect1 = UIScreen.main.bounds
+       
+        let rect1 = UIScreen.main.bounds;
         self.window = UIWindow.init(frame: rect1);
         self.window?.backgroundColor = UIColor.white;
         self.window?.makeKeyAndVisible();
         
-        let rootVC = VC_AmuseImage.init();
+        let rootVC = VC_JokePage.init();
         self.window?.rootViewController = rootVC;
         
         
